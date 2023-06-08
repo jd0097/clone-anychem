@@ -1,21 +1,22 @@
 .visual {
     position: relative;
+    /* header 의 높이값 */
     margin-top: 100px;
-}
-.visual-fixed {
-    /* header의 높이값 */
+  }
+  /* header 의 높이값 */
+  .visual-fixed {
     margin-top: 100px !important;
-}
-@media screen and (max-width: 1024px) {
+  }
+  @media screen and (max-width: 1024px) {
     .visual {
-        position: relative;
-        margin-top: 75px;
+      /* header 의 높이값 */
+      margin-top: 75px;
     }
+    /* header 의 높이값 */
     .visual-fixed {
-        /* header의 높이값 */
-        margin-top: 75px !important;
+      margin-top: 75px !important;
     }
-}
+  }
 .visual .sw-visual {
 }
 .visual .sw-visual .swiper-wrapper .swiper-slide {

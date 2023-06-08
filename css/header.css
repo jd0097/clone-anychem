@@ -22,7 +22,7 @@
     top: 0 !important;
     width: 100% !important;
 }
-.header::after {
+.header::before {
     content: "";
     position: absolute;
     left: 0;
@@ -49,7 +49,6 @@
 
 .nav {
     margin-left: 240px;
-    margin-right: 50px;
     transition: margin 0.5s;
 }
 
@@ -58,9 +57,9 @@
     position: absolute;
     left: 0;
     top: 100px;
-    width: 10px;
+    width: 0px;
     height: 1px;
-    background: #0075ff;
+    background: #0072ff;
 }
 
 .gnb {
@@ -130,9 +129,7 @@
     .header {
         padding: 0 70px;
     }
-    .nav {
-        margin-left: 90px;
-    }
+  
     .gnb {
         gap: 0 30px;
     }
