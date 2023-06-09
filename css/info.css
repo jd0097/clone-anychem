@@ -1,0 +1,8 @@
+.info .inner {
+  background: #f5f9ff;
+  padding: 60px 0;
+}
+.info .inner .info-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}/*# sourceMappingURL=info.css.map */

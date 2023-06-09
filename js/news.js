@@ -6,9 +6,9 @@ window.addEventListener("load", function () {
 // .catch((err) => console.log(err))
 const getNews = async () => {
 try {
-   const res = await fetch("data/newsdata.json")
-   const result = await res.json();
-   makeHtml(result);
+  const res = await fetch("data/newsdata.json")
+  const result = await res.json();
+  makeHtml(result);
 } catch (err) {
     console.log(err);
 }
@@ -21,21 +21,45 @@ _data.forEach(item => {
     <div class="swiper-slide">
                   <div class="news-box">
                     <a href="${item.link}">
-                      <span>${item.cate}</span>
+                      <span class = "news-cate">${item.cate}</span>
                       <p>
                       ${item.title}
                       </p>
-                      <span>
+                      <span class= "news-date">
                         <i class="fa-regular fa-clock"></i>
-                        ${item.data}
+                        ${item.date}
                       </span>
                     </a>
                   </div>
                 </div>
-             `;
-             html += tag;
+            `;
+            html += tag;
 });
-console.log(html);
+const newsWrap =this.document.querySelector(".sw-news .swiper-wrapper");
+newsWrap.innerHTML = html;
+// swiper 생성
+new Swiper(".sw-news", {
+  slidesPerView: 4,
+  spaceBetween:20,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
+  pagination: {
+    el: ".sw-news-pg",
+    clickable: true,
+  },
+  speed: 800,
+  autoplay: {
+    delay: 2500,
+  },
+});
 };
 getNews();
 });
