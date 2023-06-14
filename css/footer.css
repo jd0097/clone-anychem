@@ -1,0 +1,8 @@
+.footer {
+  background: #131618;
+}
+.footer .inner {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=footer.css.map */
